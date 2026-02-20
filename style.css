@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.todo-app {
+    background: #fff;
+    width: 100%;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Input Group Styling */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #6c5ce7;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5b4bc4;
+}
+
+/* List Styling */
+ul {
+    list-style: none;
+}
+
+li {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 18px;
+    color: #444;
+}
+
+li:first-child {
+    border-top: 1px solid #eee;
+}
+
+/* Completed State */
+li.completed {
+    text-decoration: line-through;
+    color: #aaa;
+    background-color: #f9f9f9;
+}
+
+li.completed::before {
+    content: '✔ ';
+    color: #6c5ce7;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: #ff7675;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.delete-btn:hover {
+    background-color: #d63031;
+}
+
+/* Empty State Message */
+.empty-msg {
+    text-align: center;
+    color: #aaa;
+    margin-top: 20px;
+    font-size: 14px;
+}
